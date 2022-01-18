@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>New calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="app.js" defer></script>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+    <div class="container">
+      <div class="screen">
+      <h1>{{sum}}</h1></div>
+      <div class="buttons">
+      <button v-for="operator of operators" @click="addToSum(operator)">{{ operator }}</button>
+      <button @click="evalSum">=</button>
+      <button @click="clearSum">Clear</button>
+      </div>
+    </div>  
+    </div>
+    
+
+</body>
+</html>
